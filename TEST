@@ -1,2 +1,3 @@
-thhkuerhfkrehvkuhskvhkhvkhkdhvkfhdk
-eifolfjilrefjrlifjrlejrie
+message = 'hello world'
+print(message)      
+print(messages)
