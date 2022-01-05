@@ -5,13 +5,15 @@ import  traceback
 from pathlib import Path
 
 # 1) Kode der henter og læser alle filer under mappen "J:\VOA" og samtlige undermapper. 
-# Hvis med mellemrum tilføj r foran path:
+# Hvis med mellemrum da tilføj r foran path:
+# path = 'J:\VOA'
 
+#Til test:
 path = r'J:\VOA\4Studenterbulen\SAS nyttige koder'
 
 #Tjek om VOA-path eksiterer:
-out = os.path.isfile('J:\VOA\exception_print_opholdsgrundlag_mangler_mapning.xlsx')
-print(out)
+#out = os.path.isfile('J:\VOA\exception_print_opholdsgrundlag_mangler_mapning.xlsx')
+#print(out)
 
 # 2) Loop der printer alle filer i mappe og undermapper:
 
@@ -23,13 +25,9 @@ for root, dirs, files in os.walk(path):
 for name in list_files:
 	print(name)
  
-os.chdir(path)
+#os.chdir(path)
 
-#3) Læs filer:
-def read_files(file_path):
-    with open(file_path, 'r') as file:
-        print(file.read())
-
-
-
-    
+#3) Læs filer og printer sti:
+#def read_files(file_path):
+    #with open(file_path, 'r') as file:
+        #print(file.read())
