@@ -41,9 +41,9 @@ for root, dirs, files in os.walk(path):
 print('Listing found files')
 for name in list_files:
     file_contents = read_files(name)
-    if check_for_cpr_numbers(file_contents):
-        # husk at tjekke om true og false er med her. Det tror jeg ikke, at det er.
-        # tilføj til ny liste der indeholder oversigt over alle filenavn der har cpr numre i sig
-        # returne listen af filnavne eller printe den, eller gemme i en ny fil
+    if check_for_cpr_numbers(file_contents) is True:
+        #Er true og false med her? Jeg har tilføjet 'is True'.
+        #Tilføj til ny liste der indeholder oversigt over alle filenavn der har cpr numre i sig
+        #returne listen af filnavne eller printe den, eller gemme i en ny fil
         print(name)
         pass
