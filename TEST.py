@@ -49,3 +49,6 @@ for name in list_files:
         #returne listen af filnavne eller printe den, eller gemme i en ny fil
         print(name)
         pass
+    
+    
+#Kode til at læse PDF:
