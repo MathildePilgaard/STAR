@@ -4,6 +4,7 @@ import  sys
 import  traceback
 from pathlib import Path
 import regex
+import PyPDF2
 
 # 1) Kode der henter og læser alle filer under mappen "J:\VOA" og samtlige undermapper. 
 # Hvis med mellemrum da tilføj r foran path:
@@ -39,7 +40,7 @@ for root, dirs, files in os.walk(path):
         if file.endswith('txt'):
             list_files.append(os.path.join(root,file))
 
-print('Listing found files')
+print('Listing found files containing CPR:')
 for name in list_files:
     file_contents = read_files(name)
     if check_for_cpr_numbers(file_contents) is True:
