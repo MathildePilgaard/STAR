@@ -7,6 +7,7 @@ import regex
 import PyPDF2
 import openpyxl
 import docx2txt
+import pdfplumber
 
 # 1) Kode der henter og læser alle filer under mappen "J:\VOA" og samtlige undermapper. 
 # Hvis med mellemrum da tilføj r foran path:
@@ -54,3 +55,5 @@ for name in list_files:
     
 #4) Læs PDF'er med cpr-nummer:
 
+# creating a pdf file object 
+pdfFileObj = open('example.pdf', 'rb')
