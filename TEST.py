@@ -5,6 +5,8 @@ import  traceback
 from pathlib import Path
 import regex
 import PyPDF2
+import openpyxl
+import docx2txt
 
 # 1) Kode der henter og læser alle filer under mappen "J:\VOA" og samtlige undermapper. 
 # Hvis med mellemrum da tilføj r foran path:
@@ -21,7 +23,7 @@ path = r'J:\VOA\4Studenterbulen'
  
 os.chdir(path)
 
-#3) Læs filer og printer sti:
+#3) Læs filer af TXT og .xls og printer sti:
 def read_files(file_path):
     with open(file_path, 'r') as file:
         file_contents = file.read()
@@ -50,5 +52,5 @@ for name in list_files:
         print(name)
         pass
     
-    
-#Kode til at læse PDF:
+#4) Læs PDF'er med cpr-nummer:
+
