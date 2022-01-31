@@ -29,7 +29,7 @@ def read_files(file_path):
         
 def check_for_cpr_numbers(file_contents):
     match = regex.search("([0-9]{6}-[0-9]{4}|^[0-9]{9,10}$)", file_contents, regex.IGNORECASE)
-    #Læser nu ikke komma og punktum samt læser kun x antal strings.
+    #Læser nu ikke komma og punktum samt læser kun 9-10 antal hele tal.
     return True if match else False
             
 list_files = []
